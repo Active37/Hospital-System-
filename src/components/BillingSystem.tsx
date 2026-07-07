@@ -29,6 +29,8 @@ export default function BillingSystem({
 
   const handlePrintInvoice = (inv: Invoice) => {
     setPrintInvoice(inv);
+    document.body.classList.add('printing-invoice');
+    document.body.classList.remove('printing-summary');
     setTimeout(() => {
       window.print();
     }, 150);

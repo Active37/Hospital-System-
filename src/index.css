@@ -36,24 +36,28 @@ body {
   background: #94a3b8;
 }
 
-/* Print specific styles for hospital invoices */
+/* Print specific styles for hospital invoices and patient summaries */
 @media print {
   /* Hide every element on page by default */
   body * {
     visibility: hidden;
   }
-  /* Show only the printable invoice container */
-  #printable-invoice-container, #printable-invoice-container * {
+  /* Show only the active printable container */
+  body.printing-invoice #printable-invoice-container,
+  body.printing-invoice #printable-invoice-container *,
+  body.printing-summary #printable-summary-container,
+  body.printing-summary #printable-summary-container * {
     visibility: visible;
   }
-  /* Format and stretch the printable container to take full page */
-  #printable-invoice-container {
+  /* Format and stretch the printable containers to take full page */
+  #printable-invoice-container,
+  #printable-summary-container {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 24px;
     background: white;
     color: black;
     box-shadow: none;

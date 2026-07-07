@@ -99,3 +99,11 @@ export interface InsuranceClaim {
   submittedDate: string;
   notes?: string;
 }
+
+export interface UserSession {
+  role: 'patient' | 'developer' | 'doctor' | 'nurse';
+  name: string;
+  email: string;
+  badgeCode: string;
+}
+
