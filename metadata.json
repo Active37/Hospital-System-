@@ -1,0 +1,6 @@
+{
+  "name": "Hospital Portal",
+  "description": "An interactive, single-screen patient companion for scheduling appointments, logging daily vitals, and checking symptoms.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
